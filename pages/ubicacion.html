@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Ubicación</title>
+  </head>
+  <body>
+ 
+
+    <div class="main-grid ">
+      <header class="main-grid.header grilla__header">
+        <!--  navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light navbarcolor">
+          <div class="container-fluid">
+            <img
+              class="imgLogo animate__animated animate__zoomInDown"
+              src="../images/ad.png"
+            />
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                 
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="../index.html"
+                      >INICIO</a
+                    >
+                  </li>
+                   <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="../pages/sobrenosotros.html"
+                    >SOBRE NOSOTROS</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="../pages/ubicacion.html"
+                    >UBICACIÓN</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="../pages/contacto.html"
+                    >CONTACTO</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="../pages/tienda.html"
+                    >TIENDA</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    NUESTROS SERVICIOS
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="../pages/agenda.html"
+                        >AGENDA DE TURNOS</a
+                      >
+                    </li>
+  
+                    <li>
+                      <a class="dropdown-item" href="../pages/trabajos.html"
+                        >NUESTROS TRABAJOS</a
+                      >
+                    </li>
+                    <!-- <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <aside class="main-grid.aside container-fluid">
+        <h3>Ubicación</h3>
+
+        <p>
+          Estamos en Castelar centro. A dos cuadras de la estación de tren y a
+          una cuadra de Arias y Carlos Casares
+        </p>
+      </aside>
+      <article class="main-grid.article">
+        <h2>Mapa</h2>
+        <div class="container-fluid">
+          <a
+            href="https://www.google.com.ar/maps/dir//Alejandra+D%C3%ADaz+Makeup+-+Lashes+-+Brows,+CEB,+Gdor.+Inocencio+Arias+2582,+B1712+Mor%C3%B3n,+Provincia+de+Buenos+Aires/@-34.6506425,-58.6476524,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95bcb995779f267d:0x84515aa364bcfdc5!2m2!1d-58.6454644!2d-34.650683"
+            data-toggle="popover"
+            data-trigger="hover"
+            title="Google Maps"
+            data-content="Puedes ir a Google maps para llegar más fácil"
+            >Haz click para ver como llegar</a
+          >
+        </div>
+       
+        <img
+          class="fotoCuadrada"
+          src="../images/ubicacion.jpg"
+          width="auto"
+          height="auto"
+        />
+      </article>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+      });
+    </script>
+
+    <footer class="main-grid.footer">
+      <div style="text-align-last: center">
+        Copyright &copy; 2021 | All rights reserved |
+        <a href="#" class="btn--facebook">Facebook</a> |
+        <a href="#" class="btn--instagram">Instagram</a>
+      </div>
+    </footer>
+  </body>
+</html>

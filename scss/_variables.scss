@@ -1,0 +1,26 @@
+$general-pink: #fcf3f3;
+$bubblegum-pink: #fac0e7;
+$font: "Noto Sans", sans-serif; 
+$violet: rgb(158, 92, 196);
+$rosa-fuerte: #d89ad2;
+$enable-changecolor:true;
+$violeta-suave:rgb(245, 227, 255);
+$violeta-medio:rgb(240, 212, 255);
+
+/* Operaciones */
+
+$redes: ( /*Declaramos nuestro mapa*/
+        twitter: #55acee,
+        facebook:  #3a5795,
+        instagram: #9a02a8
+); 
+/*Creamos el bucle para usar los valores del mapa*/
+@each $red, $color in $redes {
+   .btn--#{$red} {
+       color: $color;
+   }
+}
+
+
+
+ 

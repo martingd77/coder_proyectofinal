@@ -1,0 +1,13 @@
+@import "variables";
+
+.aside--changecolor {
+  @if $enable-changecolor {
+    background-color: $violeta-medio;
+  }
+}
+
+.article--changecolor{
+    @if $enable-changecolor {
+        background-color: $violeta-suave;
+      }
+}
