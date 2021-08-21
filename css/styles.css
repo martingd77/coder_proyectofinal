@@ -102,7 +102,7 @@ header {
 h1 {
   color: #a73b7d;
   text-transform: uppercase;
-  letter-spacing: 4px; }
+  letter-spacing: 1px; }
 
 h2 {
   flex: 1;
@@ -249,7 +249,9 @@ article div div {
 /* bloques BEM */
 .grilla {
   display: grid;
-  grid-template-areas: "header header header" "nav productos aside" "nav footer footer";
+  grid-template-areas: "header header header"
+ "nav productos aside"
+ "nav footer footer";
   grid-template-rows: 100px auto 75px;
   grid-template-columns: 20% auto 15%;
   margin: 10px !important; }
@@ -274,7 +276,9 @@ article div div {
 
 .productos {
   display: grid;
-  grid-template-areas: "prods prods prods" "prods prods prods" "prods prods prods";
+  grid-template-areas: "prods prods prods"
+ "prods prods prods"
+ "prods prods prods";
   grid-template-rows: auto auto auto;
   grid-template-columns: auto auto auto;
   grid-row-gap: 5px;
@@ -297,7 +301,11 @@ article div div {
 .main-grid {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-areas: "header " "nav" "productos" "aside" "footer "; }
+  grid-template-areas: "header "
+ "nav"
+ "productos"
+ "aside"
+ "footer "; }
 
 .main-grid.header {
   grid-area: header; }
@@ -317,13 +325,18 @@ article div div {
 @media only screen and (min-width: 768px) {
   .main-grid {
     grid-template-columns: 50% 50%;
-    grid-template-areas: "header  header" "nav     productos" "aside   productos " "footer      footer"; } }
+    grid-template-areas: "header  header"
+ "nav     productos"
+ "aside   productos "
+ "footer      footer"; } }
 
 @media only screen and (min-width: 1024px) {
   .main-grid {
     grid-template-columns: 20% auto 15%;
     grid-template-rows: auto auto 15%;
-    grid-template-areas: "header header header" "nav productos productos" "aside footer footer"; } }
+    grid-template-areas: "header header header"
+ "nav productos productos"
+ "aside footer footer"; } }
 
 /* FIN manejo responsive page */
 .border {
