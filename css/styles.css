@@ -9,7 +9,7 @@
 .btn--instagram {
   color: #9a02a8; }
 
-.bodycolor {
+.bodyColor {
   background-color: #fcf3f3 !important; }
 
 /* Operaciones */
@@ -56,7 +56,7 @@
 
 /* general */
 html {
-  background-image: linear-gradient(to bottom, #fcf3f3, #fac0e7);
+  background-image: linear-gradient(to bottom, #fcf3f3, #fcd9f1);
   font-family: "Noto Sans", sans-serif;
   position: relative;
   padding-left: 7rem;
@@ -74,7 +74,7 @@ body {
   padding-right: 7rem; */
   height: 80%;
   position: relative;
-  background-image: linear-gradient(to left, #fcf3f3, #fac0e7); }
+  background-image: linear-gradient(to left, #fcf3f3, #fcd9f1); }
 
 section {
   margin: 10px;
@@ -360,10 +360,10 @@ video {
   height: auto;
   position: center; }
 
-.navbarcolor {
+.navBarColor {
   background-color: #fcf3f3 !important; }
 
-.bodycolor {
+.bodyColor {
   background-color: #fcf3f3 !important; }
 
 .button {
@@ -377,7 +377,7 @@ video {
   display: inline-block;
   font-size: 16px; }
 
-.checkmark {
+.checkMark {
   height: 25px;
   width: 25px;
   background-color: #eee; }
