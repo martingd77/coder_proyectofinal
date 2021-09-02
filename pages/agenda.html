@@ -23,56 +23,55 @@
   </head>
   <body>
     <div class="container-fluid bodyColor">
-      <header class="grilla__header">
-        <!--  navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light navBarColor">
-          <div class="container-fluid">
-            <img class="imgLogo animate__animated animate__zoomInDown" src="../images/ad.png" alt="Logo" />
-            <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../index.html" >INICIO</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../pages/sobrenosotros.html" >SOBRE NOSOTROS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../pages/ubicacion.html" >UBICACIÓN</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../pages/contacto.html">CONTACTO</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../pages/tienda.html" >TIENDA</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
-                  data-bs-toggle="dropdown" aria-expanded="false" > NUESTROS SERVICIOS </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li>
-                      <a class="dropdown-item" href="../pages/agenda.html">AGENDA DE TURNOS</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="../pages/trabajos.html" >NUESTROS TRABAJOS</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+      <div class="main-grid ">
+        <header class=" main-grid.header grilla__header">
+          <!--  navbar-->
+          <nav class="navbar navbar-expand-lg navbar-light navBarColor">
+            <div class="container-fluid">
+              <img class="imgLogo animate__animated animate__zoomInDown" src="../images/ad.png" alt="Logo" />
+              <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html" >INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/sobrenosotros.html" >SOBRE NOSOTROS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/ubicacion.html" >UBICACIÓN</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/contacto.html">CONTACTO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/tienda.html" >TIENDA</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+                    data-bs-toggle="dropdown" aria-expanded="false" > NUESTROS SERVICIOS </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li>
+                        <a class="dropdown-item" href="../pages/agenda.html">AGENDA DE TURNOS</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/trabajos.html" >NUESTROS TRABAJOS</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </nav>
-        <!-- cierra navbar -->
-      </header>
-
-      <div class="container-fluid"  id="main">
-        <aside class="container-fluid" id="aside30">
+          </nav>
+          <!-- cierra navbar -->
+        </header>
+        <aside class="container-fluid main-grid.aside">
           <h1>Agenda de turnos</h1>
-          <h2>Indicaciones para agendar</h2>
-          <dl style="list-style-type: none">
+          <h4>Indicaciones para agendar</h4>
+          <dl style="list-style-type: square">
             <li>Seleccionar la fecha</li>
             <li>Seleccionar el servicio</li>
             <li>Seleccionar la profesional</li>
@@ -80,46 +79,77 @@
             <li>Confirmar</li>
           </dl>
         </aside>
-        <article class="container-fluid" id="article70">
-          <h2>Agenda</h2>
-          <!-- <div class="md-form md-outline input-with-post-icon datepicker" id="formatsSection">
-                       <input placeholder="Select date" type="text" id="formats-example" class="form-control">
-                       <label for="formats-example">Try me...</label>
-                       <i class="fas fa-calendar input-prefix" tabindex=0></i>
-                     </div> -->
-          <input type="date" id="agenda" name="Agenda" />
+        <article class="container-fluid  main-grid.article">
+          <form>
+            <div class="form-group">
+              <h5>Agenda</h5>
+              <label for="agendaInput">Selecciona la fecha para tu turno</label>
+              <input type="date"  name="Agenda" class="form-control" id="agendaInput" placeholder="Buscá la fecha que prefieras"/>
+            </div>
+            <div class="form-group">
+              <label for="servicioInput">Selecciona el servicio a realizarte:</label>
+              <select class="form-control" id="servicioInput">
+                <option>Lifting de pestañas</option>
+                <option>Lash botox</option>
+                <option>Perfilado de cejas</option>
+                <option>Uñas - Semi-permanente</option>
+                <option>Uñas - Kapping gel</option>
+                <option>Uñas - Gelificadas</option>
+                <option>Uñas - Acrilicas</option>
+              </select>
+            </div>
 
-          <p>Seleccione el servicio:</p>
-          <select name="Servicio">
-            <option value="Perfilado de cejas">Perfilado de cejas</option>
-            <option value="Lifting de pestañas" selected>
-              Lifting de pestañas
-            </option>
-            <option value="unas">Uñas</option>
-          </select>
+            <div class="form-group">
+              <label for="profesionalInput">Selecciona la profesional:</label>
+              <select class="form-control" id="profesionalInput">
+                <option>Alejandra</option>
+                <option>Mayra</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="emailInput">Correo electronico </label>
+              <input
+                type="email"
+                class="form-control"
+                id="emailInput"
+                placeholder="nombre@gmail.com"
+              />
+            </div>
+           
+            
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Comentarios</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="resize: none;"></textarea>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-secondary">
+                  Agendar turno
+                </button>
+              </div>
+            </div>
+          </form>
 
-          <p>Seleccione la profesional:</p>
-          <select name="Profesional">
-            <option value="Alejandra">Alejandra</option>
-            <option value="Mayra" selected>Mayra</option>
-          </select>
-
-          <input type="button" value="Agendar" />
         </article>
-        <div class="main-grid.nav">
-          <div style="text-align-last: center">
-            <img class="fotoCuadrada" src="../images/publicidad2.jpg" heigth="auto" alt="Publicidad"/>
+        <div class="container-fluid main-grid.nav">
+
+          <div class="main-grid.nav">
+            <div style="text-align-last: center">
+              <img class="fotoCuadrada" src="../images/publicidad2.jpg" heigth="auto" alt="Publicidad"/>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <footer>
-      <div style="text-align-last: center">
-        Copyright &copy; 2021 | All rights reserved |
-        <a href="#" class="btn--facebook">Facebook</a> |
-        <a href="#" class="btn--instagram">Instagram</a>
+      <footer>
+        <div style="text-align-last: center">
+          Copyright &copy; 2021 | All rights reserved |
+          <a href="https://b-m.facebook.com/Alepromakeup-235543087341031/" target="_blank" class="btn--facebook">Facebook</a> |
+          <a href="https://www.instagram.com/ale.promakeup/?hl=es-la" target="_blank" class="btn--instagram">Instagram</a>
+        </div>
+      </footer>
       </div>
-    </footer>
+
     <script>
       $(".datepicker").datepicker({
         weekdaysShort: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],

@@ -59,8 +59,6 @@ html {
   background-image: linear-gradient(to bottom, #fcf3f3, #fcd9f1);
   font-family: "Noto Sans", sans-serif;
   position: relative;
-  padding-left: 7rem;
-  padding-right: 7rem;
   /* height: 80%; */ }
 
 main {
@@ -70,11 +68,13 @@ main {
 
 body {
   margin: 10px;
-  /*  padding-left: 7rem;
-  padding-right: 7rem; */
   height: 80%;
   position: relative;
   background-image: linear-gradient(to left, #fcf3f3, #fcd9f1); }
+
+.bodyResponsive {
+  padding-left: 7rem;
+  padding-right: 7rem; }
 
 section {
   margin: 10px;
@@ -94,10 +94,12 @@ nav {
   flex-direction: row;
   justify-content: flex-end; }
 
-header {
-  list-style-position: inside;
+.header {
+  /* list-style-position: inside;
   list-style-type: armenian;
-  list-style: lower-roman;
+  list-style: lower-roman; */
+  margin-left: 8rem !important;
+  margin-right: 8rem !important;
   /* margin: 10px; */ }
 
 h1 {
@@ -112,8 +114,12 @@ h2 {
 
 h3 {
   color: #8d27a7;
+  text-transform: uppercase; }
+
+h4 {
+  padding-top: 1em;
   text-transform: uppercase;
-  text-decoration: underline; }
+  font-size: 1.2em; }
 
 .bordesRedondeados {
   border-radius: 10px; }
@@ -128,6 +134,10 @@ img {
   height: auto !important;
   max-width: 100%; }
 
+img.fotoRedonda {
+  border-radius: 70%;
+  max-width: 35% !important; }
+
 img.fotoCuadrada {
   border-radius: 10px;
   display: inline-block; }
@@ -138,8 +148,11 @@ img.logo {
 
 p {
   font-style: oblique;
-  font-weight: bold;
-  word-spacing: 5px; }
+  text-align: justify;
+  font-weight: normal;
+  word-spacing: 4px;
+  font-size: 0.9em;
+  padding-top: 1rem; }
 
 a {
   text-decoration: none; }
@@ -157,6 +170,13 @@ td {
   border: 1.5px solid;
   border-color: #9e5cc4;
   font-family: "Noto Sans", sans-serif; }
+
+tr th {
+  font-size: 1rem;
+  text-align: center; }
+
+tr td {
+  font-size: 0.8rem; }
 
 table {
   border: 3px solid;
@@ -187,16 +207,30 @@ ul li {
   display: inline-block;
   text-decoration: none; }
 
+dl {
+  padding-top: 1rem; }
+  dl li {
+    text-transform: uppercase;
+    font-size: 0.9em; }
+
+/*----------FIN LISTAS-------- */
 #main {
   display: flex;
   flex: 1;
   margin-top: 20px; }
 
 article,
-aside,
+aside {
+  flex: 1;
+  background-color: #fcf3f3;
+  opacity: 0.75;
+  /* border-radius: 10px;
+  margin: 3px; */ }
+
 footer {
   flex: 1;
-  padding: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   background-color: #fcf3f3;
   opacity: 0.75;
   /* border-radius: 10px;
@@ -298,9 +332,14 @@ article div div {
 /* fin bloques BEM */
 /* INICIO manejo responsive page */
 .main-grid {
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-areas: "header " "nav" "productos" "aside" "footer "; }
+  grid-template-areas: "header " "navi" "productos" "aside" "footer "; }
+  .main-grid img.fotoRedonda {
+    border-radius: 70%;
+    max-width: 20% !important; }
 
 .main-grid.header {
   grid-area: header; }
@@ -312,21 +351,33 @@ article div div {
   grid-area: productos; }
 
 .main-grid.nav {
-  grid-area: nav; }
+  grid-area: navi;
+  text-align: center; }
 
 .main-grid.aside {
   grid-area: aside; }
 
 @media only screen and (min-width: 768px) {
   .main-grid {
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "header  header" "nav     productos" "aside   productos " "footer      footer"; } }
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+    grid-template-columns: 25% auto 20%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" "aside  productos navi" "footer footer footer"; }
+    .main-grid img.fotoRedonda {
+      border-radius: 70%;
+      max-width: 35% !important; } }
 
 @media only screen and (min-width: 1024px) {
   .main-grid {
+    margin-left: 8rem !important;
+    margin-right: 8rem !important;
     grid-template-columns: 25% auto 20%;
     grid-template-rows: auto auto 15%;
-    grid-template-areas: "header header header" "aside productos nav" "footer footer footer"; } }
+    grid-template-areas: "header header header" "aside productos navi" "footer footer footer"; }
+    .main-grid img.fotoRedonda {
+      border-radius: 70%;
+      max-width: 35% !important; } }
 
 /* FIN manejo responsive page */
 .border {
@@ -381,3 +432,7 @@ video {
   height: 25px;
   width: 25px;
   background-color: #eee; }
+
+form {
+  padding-left: 1rem;
+  padding-right: 1rem; }
