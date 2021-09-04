@@ -28,10 +28,11 @@
   <body>
    
     <div class="container-fluid bodyColor ">
+      <div class="main-grid">
       <!-- header -->
-      <header class="header">
+      <header class="grilla__header main-grid.header">
         <!--  navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navBarColor">
+        <nav class="navbar navbar-expand-lg navbar-light navBarColor">
           <div class="container-fluid">
             <img class="imgLogo animate__animated animate__zoomInDown" src="images/ad.png" alt="Logo" />     
             <button
@@ -80,10 +81,7 @@
           </div>
         </nav>
       </header>
-      <div class="contaier-fluid col-sm-12 col-md-12 col-lg-10 px-5 mx-auto">
-
-        <div class="row ">
-          <div class="col-sm-12 col-md-6 col-lg-4 pb-4 pt-4">
+        <aside class="container-fluid main-grid.aside " style="margin-top: 1em; margin-bottom:1em;" >
             <h1>Alejandra Díaz Studio</h1>
             <h4>Informacion general</h4>
             <p>
@@ -105,32 +103,10 @@
                 -Mercado Pago 
                 -Transferencia bancaria
               </p>
-             
-            </div>
-          </div>
-
-          <div class="col-sm-12 col-md-6 col-lg-8 pb-4 pt-4 container-fluid">
-            <video loop autoplay muted controls>
-              <source
-                class="img-rounded"
-                src="images\1625686143938.mp4"
-                type="video/mp4"
-                alt="video estudio"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-
-        <div class="row">
-          <!-- publicidad -->
-          <div class="col-sm-12 col-md-6 col-lg-4 pb-4 pt-4">
-            <div style="text-align-last: center" >
-              <img class="img-rounded" src="images/publi2.png" alt="publicidad 2" />
-            </div>
-          </div>
+        </aside>
+        <article class="container-fluid main-grid.article">
           <!-- carrusel -->
-          <div class="col-sm-12 col-md-6 col-lg-8 pb-4 pt-4">
+          <div class="container-fluid" > 
             <div
               id="carouselExampleIndicators"
               class="carousel slide"
@@ -163,9 +139,41 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
+          </div> 
+          <div class="container-fluid" >
+            <video loop autoplay muted controls>
+              <source
+                class="img-rounded"
+                src="images\1625686143938.mp4"
+                type="video/mp4"
+                alt="video estudio"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>        
+
+        </article>
+        <div class="container-fluid main-grid.nav">
+          <div class="row">
+            <!-- publicidad -->
+            <div >
+              <div style="text-align-last: center; margin-top: 1em;margin-bottom:1em;" >
+                <img class="img-rounded" src="images/coderhouse-logo.png" alt="publicidad 2" />
+              </div>
+              <div style="text-align-last: center; margin-top: 1em;margin-bottom:1em;" >
+                <img class="img-rounded" src="images/open-english.jpg" alt="publicidad 2" />
+              </div>
+              <div style="text-align-last: center; margin-top: 1em; margin-bottom:1em;" >
+                <img class="img-rounded" src="images/publi2.png" alt="publicidad 1" />
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
+
+      </div>
+
       <footer>
         <div style="text-align-last: center">
           Copyright &copy; 2021 | All rights reserved |

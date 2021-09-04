@@ -230,9 +230,11 @@ footer {
 }
 
 article div {
-  padding: 10px;
+ /*  padding: 10px; */
   flex-grow: 1;
   flex-shrink: 1;
+  margin-top: 1em;
+  margin-bottom:1em;
 }
 
 article div div {
