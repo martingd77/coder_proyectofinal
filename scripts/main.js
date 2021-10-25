@@ -9,11 +9,16 @@ class Reserva{
         this.precio = precio,
         this.dia = dia,
         this.cantidad = cantidad,
+        this.subTotal = 0,
         this.total = 0
     }
 
+    calcularSubTotal() {
+        this.subTotal = this.precio * this.cantidad;
+    }
+
     calcularTotal() {
-        this.total = this.precio * this.cantidad;
+        this.total = this.subTotal;
     }
 }
 
@@ -58,11 +63,16 @@ alert("Bienvenida/o a nuestra agenda online");
 
 const reserva = reservarServicio();
 
+reserva.calcularSubTotal();
 reserva.calcularTotal();
 
-alert("Detalle de la reserva:\n"+
-    "- " + reserva.servicio + " x " + reserva.cantidad + ": $" + reserva.precio * reserva.cantidad +"\n" +
-    /* "- IVA 21%: $" + reserva.calcularIva() + "\n" + */
-    "- Día de la reserva: " + reserva.dia + "\n" +
-    "Total = $" + reserva.total
-);
+let contenedorReserva = document.createElement("div");
+
+contenedorReserva.innerHTML = `<div class="container">
+                                 <h3> Detalle de la reserva: \n </h3>
+                                    <p> -${reserva.servicio} x ${reserva.cantidad} : $ ${reserva.subTotal} </p>
+                                    <p> -Día de la reserva: ${reserva.dia} </p>
+                                    <p> -Total = $ ${reserva.total}</p>
+                                </div>`;
+
+document.body.appendChild(contenedorReserva);
