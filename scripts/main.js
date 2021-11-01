@@ -4,6 +4,8 @@ let profesional = "";
 let precio = 0;
 let dia;
 
+let contenedorReserva = document.createElement("div");
+
 class Reserva{
     constructor(servicio, precio, profesional, dia, cantidad){
         this.servicio = servicio,
@@ -26,19 +28,25 @@ class Reserva{
 
 document.getElementById("agendaInput").addEventListener("blur", function() {
     var input = this.value;
-    dia = new Date(input);
+    dia = input;
     console.log(input);
     console.log(dia);
 }); 
 
 
-crearReserva = function(dia){
-    debugger;
-    const reserva = reservarServicio(dia);
+
+function crearReserva(e){
+
+    if(contenedorReserva.innerHTML != ""){
+        contenedorReserva.innerHTML = "";
+    }
+    
+    e.preventDefault();
+    let form = e.target;
+   
+    const reserva = reservarServicio();
     reserva.calcularSubTotal();
     reserva.calcularTotal();
-
-    let contenedorReserva = document.createElement("div");
 
     contenedorReserva.innerHTML = `<div class="container">
                                  <h3> Detalle de la reserva: \n </h3>
@@ -49,12 +57,17 @@ crearReserva = function(dia){
                                 </div>`;
 
     document.body.appendChild(contenedorReserva);
+    debugger;
+    let reservaJson = JSON.stringify(reserva);
+
+    localStorage.setItem("Reserva - " + reserva.servicio + " - " + reserva.profesional, reservaJson);
 }
 
 let miForm = document.getElementById("formReserva");
-miForm.addEventListener("submit", crearReserva(dia));
+miForm.addEventListener("submit", crearReserva);
 
 function reservarServicio(){
+    /* console.log(); */ 
     let servicio = document.getElementById("servicioInput");
     servicioReserva = servicio.value;
     switch(servicioReserva){
@@ -81,10 +94,6 @@ function reservarServicio(){
             break;
     }
     cantidadServicio = 1;
-       
-    /* let fechaSeleccionada = document.querySelector('input[type="date"]');
-    dia = fechaSeleccionada.value;
-    console.log(dia); */
 
     let profesionalSeleccionada = document.getElementById("profesionalInput");
     profesional = profesionalSeleccionada.value;
@@ -93,8 +102,34 @@ function reservarServicio(){
     
 }
 
+document.getElementById("btnMostrarTurnos").addEventListener("click", function() {
+    let reservas = getReservas();
+    console.log(reservas);
+    debugger;
+    for(const reserva of reservas)
+    {
+        alert("Reserva guardada: " + reserva.servicio + " - " + reserva.profesional + " - " + reserva.dia);
+    }    
+});
 
+function getReservas(){
+    var reservas = [];
+    var values = [],
+        keys = Object.keys(localStorage),
+        i = keys.length;
 
+    while ( i-- ) {
+        values.push(localStorage.getItem(keys[i]));
+    }
 
+    for(const value of values){
+        if(value.includes("servicio")){
+            reservas.push(JSON.parse(value));
+        }
+
+    }
+
+    return reservas;
+}
 
 
