@@ -6,34 +6,12 @@ let dia;
 
 let contenedorReserva = document.createElement("div");
 
-class Reserva{
-    constructor(servicio, precio, profesional, dia, cantidad){
-        this.servicio = servicio,
-        this.precio = precio,
-        this.profesional = profesional,
-        this.dia = dia,
-        this.cantidad = cantidad,
-        this.subTotal = 0,
-        this.total = 0
-    }
-
-    calcularSubTotal() {
-        this.subTotal = this.precio * this.cantidad;
-    }
-
-    calcularTotal() {
-        this.total = this.subTotal;
-    }
-}
-
 document.getElementById("agendaInput").addEventListener("blur", function() {
     var input = this.value;
     dia = input;
     console.log(input);
     console.log(dia);
 }); 
-
-
 
 function crearReserva(e){
 
@@ -48,7 +26,18 @@ function crearReserva(e){
     reserva.calcularSubTotal();
     reserva.calcularTotal();
 
-    contenedorReserva.innerHTML = `<div class="container">
+    //jQuery
+    $("body").append(`<div class="container">
+                        <h3> Detalle de la reserva: \n </h3>
+                        <p> -${reserva.servicio} x ${reserva.cantidad} : $ ${reserva.subTotal} </p>
+                        <p> -Profesional: ${reserva.profesional} </p>
+                        <p> -Día de la reserva: ${reserva.dia} </p>
+                        <p> -Total = $ ${reserva.total}</p>
+                    </div>`
+    );
+
+    //JS
+    /* contenedorReserva.innerHTML = `<div class="container">
                                  <h3> Detalle de la reserva: \n </h3>
                                     <p> -${reserva.servicio} x ${reserva.cantidad} : $ ${reserva.subTotal} </p>
                                     <p> -Profesional: ${reserva.profesional} </p>
@@ -56,7 +45,8 @@ function crearReserva(e){
                                     <p> -Total = $ ${reserva.total}</p>
                                 </div>`;
 
-    document.body.appendChild(contenedorReserva);
+    document.body.appendChild(contenedorReserva); */
+
     debugger;
     let reservaJson = JSON.stringify(reserva);
 
@@ -102,7 +92,19 @@ function reservarServicio(){
     
 }
 
-document.getElementById("btnMostrarTurnos").addEventListener("click", function() {
+//con jQuery
+$('#btnMostrarTurnos').on('click', function(){
+    let reservas = getReservas();
+    console.log(reservas);
+    debugger;
+    for(const reserva of reservas)
+    {
+        alert("Reserva guardada: " + reserva.servicio + " - " + reserva.profesional + " - " + reserva.dia);
+    }  
+});
+
+//con JS normal
+/* document.getElementById("btnMostrarTurnos").addEventListener("click", function() {
     let reservas = getReservas();
     console.log(reservas);
     debugger;
@@ -110,6 +112,12 @@ document.getElementById("btnMostrarTurnos").addEventListener("click", function()
     {
         alert("Reserva guardada: " + reserva.servicio + " - " + reserva.profesional + " - " + reserva.dia);
     }    
+}); */
+
+
+$('#logo').hover(function(){
+    $(this).fadeOut(600);
+    $(this).fadeIn(600);
 });
 
 function getReservas(){
