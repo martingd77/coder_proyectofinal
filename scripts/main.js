@@ -84,7 +84,6 @@ function reservarServicio(){
 $('#btnMostrarTurnos').on('click', function(){
     let reservas = getReservas();
     console.log(reservas);
-    debugger;
     for(const reserva of reservas)
     {
         alert("Reserva guardada: " + reserva.servicio + " - " + reserva.profesional + " - " + reserva.dia);
