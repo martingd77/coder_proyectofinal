@@ -36,18 +36,6 @@ function crearReserva(e){
                     </div>`
     );
 
-    //JS
-    /* contenedorReserva.innerHTML = `<div class="container">
-                                 <h3> Detalle de la reserva: \n </h3>
-                                    <p> -${reserva.servicio} x ${reserva.cantidad} : $ ${reserva.subTotal} </p>
-                                    <p> -Profesional: ${reserva.profesional} </p>
-                                    <p> -Día de la reserva: ${reserva.dia} </p>
-                                    <p> -Total = $ ${reserva.total}</p>
-                                </div>`;
-
-    document.body.appendChild(contenedorReserva); */
-
-    debugger;
     let reservaJson = JSON.stringify(reserva);
 
     localStorage.setItem("Reserva - " + reserva.servicio + " - " + reserva.profesional, reservaJson);
@@ -102,18 +90,6 @@ $('#btnMostrarTurnos').on('click', function(){
         alert("Reserva guardada: " + reserva.servicio + " - " + reserva.profesional + " - " + reserva.dia);
     }  
 });
-
-//con JS normal
-/* document.getElementById("btnMostrarTurnos").addEventListener("click", function() {
-    let reservas = getReservas();
-    console.log(reservas);
-    debugger;
-    for(const reserva of reservas)
-    {
-        alert("Reserva guardada: " + reserva.servicio + " - " + reserva.profesional + " - " + reserva.dia);
-    }    
-}); */
-
 
 $('#logo').hover(function(){
     $(this).fadeOut(600);
