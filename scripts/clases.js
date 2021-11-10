@@ -18,3 +18,38 @@ class Reserva{
         this.total = this.subTotal;
     }
 }
+
+class Producto{
+    constructor(id, descripcion, precio, imagen){
+        this.id = id;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.imagen = imagen;
+        this.cantidad = 0;
+    }
+
+    agregarAlCarrito(){
+        this.cantidad = this.cantidad + 1;
+    }
+
+    quitarDelCarrito(){
+        this.cantidad = this.cantidad - 1;
+    }
+
+    getDescripcion() {
+        return this.descripcion;
+    }
+
+    getSrcImage(){
+        return this.imagen;
+    }
+
+    getPrecio(){
+
+        return this.precio;
+    }
+
+    getId(){
+        return this.id;
+    }
+}
