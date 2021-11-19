@@ -1,10 +1,11 @@
 
 class Reserva{
-    constructor(servicio, precio, profesional, dia, cantidad){
+    constructor(servicio, precio, profesional, dia, hora, cantidad){
         this.servicio = servicio;
         this.precio = precio;
         this.profesional = profesional;
         this.dia = dia;
+        this.hora = hora;
         this.cantidad = cantidad;
         this.subTotal = 0;
         this.total = 0;

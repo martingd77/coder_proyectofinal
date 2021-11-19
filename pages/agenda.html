@@ -50,18 +50,13 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../pages/tienda.html" >TIENDA</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
-                    data-bs-toggle="dropdown" aria-expanded="false" > NUESTROS SERVICIOS </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li>
-                        <a class="dropdown-item" href="../pages/agenda.html">AGENDA DE TURNOS</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="../pages/trabajos.html" >NUESTROS TRABAJOS</a>
-                      </li>
-                    </ul>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/agenda.html">AGENDA DE TURNOS</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/trabajos.html" >NUESTROS TRABAJOS</a>
+                  </li>
+                
                 </ul>
               </div>
             </div>
@@ -82,12 +77,16 @@
         </aside>
         <article class="container-fluid  main-grid.article">
           <form id="formReserva">
+            
             <div class="form-group">
               <h5>Agenda</h5>
-              <label for="agendaInput">Selecciona la fecha para tu turno</label>
-              <input type="date" class="form-control"  id="agendaInput" placeholder="DD/MM/YYYY" >
-              <!-- <input type="date"  name="Agenda" class="form-control" id="agendaInput" placeholder="Buscá la fecha que prefieras"/> -->
+              <label for="profesionalInput">Selecciona la profesional:</label>
+              <select class="form-control" id="profesionalInput">
+                <option>Alejandra</option>
+                <option>Mayra</option>
+              </select>
             </div>
+
             <div class="form-group">
               <label for="servicioInput">Selecciona el servicio a realizarte:</label>
               <select class="form-control" id="servicioInput">
@@ -102,13 +101,25 @@
             </div>
 
             <div class="form-group">
-              <label for="profesionalInput">Selecciona la profesional:</label>
-              <select class="form-control" id="profesionalInput">
-                <option>Alejandra</option>
-                <option>Mayra</option>
-              </select>
+              <label for="agendaInput">Selecciona la fecha para tu turno</label>
+              <input type="date" class="form-control"  id="agendaInput" placeholder="DD/MM/YYYY" >
+              <!-- <input type="date"  name="Agenda" class="form-control" id="agendaInput" placeholder="Buscá la fecha que prefieras"/> -->
             </div>
             
+            <div class="form-group">
+              <label for="horarioInput">Selecciona el horario:</label>
+              <select class="form-control" id="horarioInput">
+                <option>10:00 hs</option>
+                <option>11:00 hs</option>
+                <option>12:00 hs</option>
+                <option>14:00 hs</option>
+                <option>15:00 hs</option>
+                <option>16:00 hs</option>
+                <option>17:00 hs</option>
+                <option>18:00 hs</option>
+              </select>
+            </div>
+
             <div class="form-group">
               <label for="emailInput">Correo electronico </label>
               <input

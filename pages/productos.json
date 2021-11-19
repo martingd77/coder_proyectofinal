@@ -1,0 +1,59 @@
+
+
+	[	{
+			"id": 1,
+			"nombre": "Labial Mac - Coral",
+			"precio": 1500,
+			"imagen": "../images/labial-mac-oscuro.jpg"
+
+		},
+		{
+			"id": 2,
+			"nombre": "Labial Mac - Rojo",
+			"precio": 1500,
+			"imagen": "../images/labial-mac-rojo.png"
+		},
+		{
+			"id": 3,
+			"nombre": "Labial Mac - Nude",
+			"precio": 1500,
+			"imagen": "../images/labial-mac-nude.jpg"
+		},
+		{
+			"id": 4,
+			"nombre": "Ricosti - Beijo ",
+			"precio": 1100,
+			"imagen": "../images/ricosti-rosa.png"
+		},
+		{
+			"id": 5,
+			"nombre": "Ricosti - Bem me ",
+			"precio": 1100,
+			"imagen": "../images/labial-mac-nude.jpg"
+		},
+		{
+			"id": 6,
+			"nombre": "Labial Mac - Nude",
+			"precio": 1500,
+			"imagen": "../images/labial-mac-nude.jpg"
+		},
+		{
+			"id": 7,
+			"nombre": "Ricosti - Violeta matte",
+			"precio": 1200,
+			"imagen": "../images/ricosti-violeta.jpg"
+		},
+		{
+			"id": 8,
+			"nombre": "Ricosti - Nude",
+			"precio": 1100,
+			"imagen": "../images/labial-mac-nude.jpg"
+		},
+		{
+			"id": 9,
+			"nombre": "Ricosti - Rojo",
+			"precio": 1100,
+			"imagen": "../images/labial-mac-rojo.png"
+		}
+
+	]

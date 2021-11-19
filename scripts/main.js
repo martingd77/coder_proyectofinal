@@ -3,6 +3,7 @@ let cantidadServicio = 0;
 let profesional = "";
 let precio = 0;
 let dia;
+let hora;
 
 let contenedorReserva = document.createElement("div");
 
@@ -31,7 +32,7 @@ function crearReserva(e){
                         <h3> Detalle de la reserva: \n </h3>
                         <p> -${reserva.servicio} x ${reserva.cantidad} : $ ${reserva.subTotal} </p>
                         <p> -Profesional: ${reserva.profesional} </p>
-                        <p> -Día de la reserva: ${reserva.dia} </p>
+                        <p> -Día de la reserva: ${reserva.dia} a las ${reserva.hora}</p>
                         <p> -Total = $ ${reserva.total}</p>
                     </div>`
     );
@@ -41,13 +42,11 @@ function crearReserva(e){
     localStorage.setItem("Reserva - " + reserva.servicio + " - " + reserva.profesional, reservaJson);
 }
 
-let miForm = document.getElementById("formReserva");
+let miForm = document.getElementById("formReserva"); 
 miForm.addEventListener("submit", crearReserva);
 
 function reservarServicio(){
-    /* console.log(); */ 
-    let servicio = document.getElementById("servicioInput");
-    servicioReserva = servicio.value;
+    servicioReserva = $("#servicioInput").val();
     switch(servicioReserva){
         case "Lifting de pestañas":
             precio = 1500;
@@ -73,14 +72,14 @@ function reservarServicio(){
     }
     cantidadServicio = 1;
 
-    let profesionalSeleccionada = document.getElementById("profesionalInput");
-    profesional = profesionalSeleccionada.value;
+    profesional = $("#profesionalInput").val();
 
-    return new Reserva(servicioReserva, precio, profesional, dia, cantidadServicio);
-    
+    hora = $("#horarioInput").val();
+
+    return new Reserva(servicioReserva, precio, profesional, dia, hora, cantidadServicio);
 }
 
-//con jQuery
+//boton mostrar turnos
 $('#btnMostrarTurnos').on('click', function(){
     let reservas = getReservas();
     console.log(reservas);
@@ -90,6 +89,7 @@ $('#btnMostrarTurnos').on('click', function(){
     }  
 });
 
+//efecto logo hover
 $('#logo').hover(function(){
     $(this).fadeOut(600);
     $(this).fadeIn(600);
@@ -115,4 +115,22 @@ function getReservas(){
     return reservas;
 }
 
+$(function () {
+    var $prof = $('select[id=profesionalInput]');
+    var $serv = $('select[id=servicioInput]');
 
+    var $servList = $serv.find('option').clone();
+
+    var profesionalServicio = {
+        Alejandra: ["Lifting de pestañas", "Lash botox", "Perfilado de cejas"],
+        Mayra: ["Uñas - Semi-permanente", "Uñas - Kapping gel", "Uñas - Gelificadas", "Uñas - Acrilicas"]
+    }
+    
+    $prof.change(function () {
+        var $profesionalSeleccionado = $(this).find('option:selected').text();
+        $serv.html($servList.filter(function () {
+            return $.inArray($(this).text(), profesionalServicio[$profesionalSeleccionado]) >= 0;
+        }));
+    });
+
+});

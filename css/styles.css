@@ -124,12 +124,12 @@ h4 {
 .bordesRedondeados {
   border-radius: 10px; }
 
-.imgLogo {
+.imgLogo {border-radius: 70%;
   max-width: 7%; }
 
 /* Img styles */
 img {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   width: auto !important;
   height: auto !important;
   max-width: 100%; }
@@ -139,7 +139,7 @@ img.fotoRedonda {
   max-width: 35% !important; }
 
 img.fotoCuadrada {
-  border-radius: 10px;
+  border-radius: 10px !important;
   display: inline-block; }
 
 img.logo {
@@ -281,7 +281,9 @@ article div div {
 /* bloques BEM */
 .grilla {
   display: grid;
-  grid-template-areas: "header header header" "nav productos aside" "nav footer footer";
+  grid-template-areas: "header header header"
+ "nav productos aside"
+ "nav footer footer";
   grid-template-rows: 100px auto 75px;
   grid-template-columns: 20% auto 15%;
   margin: 10px !important; }
@@ -312,7 +314,9 @@ article div div {
 
 .productos {
   display: grid;
-  grid-template-areas: "prods prods prods" "prods prods prods" "prods prods prods";
+  grid-template-areas: "prods prods prods"
+ "prods prods prods"
+ "prods prods prods";
   grid-template-rows: auto auto auto;
   grid-template-columns: auto auto auto;
   grid-row-gap: 5px;
@@ -321,6 +325,7 @@ article div div {
   padding: 1rem; }
 
 .productos__img {
+  border-radius: 50%;
   width: 100px;
   height: 100px; }
 
@@ -338,7 +343,11 @@ article div div {
   margin-right: 1rem !important;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-areas: "header " "navi" "productos" "aside" "footer "; }
+  grid-template-areas: "header "
+ "navi"
+ "productos"
+ "aside"
+ "footer "; }
   .main-grid img.fotoRedonda {
     border-radius: 70%;
     max-width: 20% !important; }
@@ -365,7 +374,9 @@ article div div {
     margin-right: 1rem !important;
     grid-template-columns: 25% auto 20%;
     grid-template-rows: auto;
-    grid-template-areas: "header header header" "aside  productos navi" "footer footer footer"; }
+    grid-template-areas: "header header header"
+ "aside  productos navi"
+ "footer footer footer"; }
     .main-grid img.fotoRedonda {
       border-radius: 70%;
       max-width: 35% !important; } }
@@ -376,7 +387,9 @@ article div div {
     margin-right: 8rem !important;
     grid-template-columns: 25% auto 20%;
     grid-template-rows: auto auto 15%;
-    grid-template-areas: "header header header" "aside productos navi" "footer footer footer"; }
+    grid-template-areas: "header header header"
+ "aside productos navi"
+ "footer footer footer"; }
     .main-grid img.fotoRedonda {
       border-radius: 70%;
       max-width: 35% !important; } }
@@ -438,3 +451,29 @@ video {
 form {
   padding-left: 1rem;
   padding-right: 1rem; }
+
+.btn-warning{
+  background-color: #b771f8;
+  border-color:  #b771f8;
+}
+
+.btn-warning:hover {
+  background-color: #d89ad2;
+  border-color:  #d89ad2;
+}
+
+
+.contadorCarrito{
+  position: absolute;
+  top: 0;
+  left: 55%;
+  /* background: red; */
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 2px;
+}

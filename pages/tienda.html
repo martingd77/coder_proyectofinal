@@ -29,7 +29,7 @@
       <div class="main-grid ">
         <header class="main-grid.header grilla__header">
           <!--  navbar-->
-          <nav class="navbar navbar-expand-lg navbar-light navbar-inverse navBarColor">
+          <nav class="navbar navbar-expand-lg navbar-light navBarColor ">
            <div class="container-fluid">
              <img class="imgLogo animate__animated animate__zoomInDown" src="../images/ad.png" alt="Logo" />
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -53,22 +53,21 @@
                  <li class="nav-item">
                    <a class="nav-link active" aria-current="page" href="../pages/tienda.html" >TIENDA</a>
                  </li>
-                 <li class="nav-item dropdown">
-                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
-                   data-bs-toggle="dropdown" aria-expanded="false" > NUESTROS SERVICIOS</a>
-                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <li>
-                       <a class="dropdown-item" href="../pages/agenda.html"
-                         >AGENDA DE TURNOS</a
-                       >
-                     </li>
-                     <li>
-                       <a class="dropdown-item" href="../pages/trabajos.html"
-                         >NUESTROS TRABAJOS</a
-                       >
-                     </li>
-                   </ul>
-                 </li>
+                 <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../pages/agenda.html">AGENDA DE TURNOS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../pages/trabajos.html" >NUESTROS TRABAJOS</a>
+                </li>         
+
+                 <li class="nav-item">
+                  <div class="nav-item">
+                    <div class="contadorCarrito" id="cantidadProductos"></div>
+                    <img style ="border-radius: 10%; max-width:90%" class="nav-item" src="../images/bolso.png" alt="Bolsa de compras" />
+                    
+                  </div>
+                 
+                </li>
                </ul>
              </div>
            </div>
@@ -98,21 +97,11 @@
           </div>
           <!-- prods -->
           <div id="contProductos" class="container-fluid productos col-sm-12 col-md-6 col-lg-6">
-            <!-- <article id="article70"> -->
-            <!-- <img class="productos__img" src="../images/labial1.jpg" alt="Labial1" />
-            <img class="productos__img" src="../images/labial2.jpg" alt="Labial2"/>
-            <img class="productos__img" src="../images/labial1.jpg" alt="Labial1"/>
-            <img class="productos__img" src="../images/labial2.jpg" alt="Labial2"/>
-            <img class="productos__img" src="../images/labial1.jpg" alt="Labial1"/>
-            <img class="productos__img" src="../images/labial2.jpg" alt="Labial2"/>
-            <img class="productos__img" src="../images/labial2.jpg" alt="Labial2"/>
-            <img class="productos__img" src="../images/labial1.jpg" alt="Labial1"/>
-            <img class="productos__img" src="../images/labial2.jpg" alt="Labial2"/> -->
-
+           
             <!-- </article> -->
           </div>
           <!-- publi -->
-          <div class="container-fluid col-sm-12 col-md-2 col-lg-3">
+          <div class="container-fluid col-sm-12 col-md-2 col-lg-2">
             <div style="text-align-last: center">
               <img class="fotoCuadrada" src="../images/publicidad.jpg" heigth="auto" alt="Publicidad" />
             </div>
