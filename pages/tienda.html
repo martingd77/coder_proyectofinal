@@ -63,8 +63,7 @@
                  <li class="nav-item">
                   <div class="nav-item">
                     <div class="contadorCarrito" id="cantidadProductos"></div>
-                    <img style ="border-radius: 10%; max-width:90%" class="nav-item" src="../images/bolso.png" alt="Bolsa de compras" />
-                    
+                    <img id="bolsaCompras"style ="border-radius: 10%; max-width:90%" class="nav-item" src="../images/bolso.png" alt="Bolsa de compras" data-toggle="modal" data-target="#myModal" />
                   </div>
                  
                 </li>
@@ -75,6 +74,26 @@
          </header>
       </div>
       
+      
+    <!-- modal -->
+    <div class="modal fade  come-from-modal right" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" style="border-radius: 10%; background-color: violet;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Productos agregados</h4>
+              </div>
+              <div id="modalBody" class="modal-body">
+                  
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Seguir comprando</button>
+                  <button type="button" class="btn btn-primary" style="background-color: violet; border-color:mediumorchid;">Finalizar compra</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
       <div class="container-fluid col-sm-12 col-md-12 col-lg-10 px-5 mx-auto">
         <div class="row">
           <!-- aside -->
