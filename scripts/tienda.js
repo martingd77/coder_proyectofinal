@@ -5,10 +5,10 @@ $(document).ready(() => {
     let productosAgregados = new Array();
 
     $.getJSON(URLJSON, function (respuesta, estado){
-        /* debugger; */
+        
         console.log(estado);
           if(estado === "success"){
-            /* debugger; */
+            
             let productos = respuesta;
             for (const prod of productos) {
                 $("#contProductos").append(
@@ -20,7 +20,7 @@ $(document).ready(() => {
                 );
         
                 $(`#btn${prod.id}`).on('click',function () {
-                debugger;
+               
                 
 
                 if(productosAgregados.find( x => x.id === prod.id))
@@ -38,15 +38,32 @@ $(document).ready(() => {
                 }
                 
                 console.log(productosAgregados);
-                //alert(`Agregaste: ${objeto_producto.getDescripcion()}`);
                 cantProd ++;
                 let cantactual = $("#cantidadProductos").text();
                 
+                let compraActual = JSON.stringify(productosAgregados);
+
+                localStorage.setItem("Compra - " , compraActual);
+
                 $("#bolsaCompras").on('click', function(){
-                    debugger; 
                     $("#modalBody").empty();
                     $("#modalBody").append(
                         `<p> ${mostrarCarrito(productosAgregados)}</p>`
+                       
+                    );                   
+                });
+
+                $("#btnFinalizarCompra").on('click', function(){
+ 
+                    $("#modalBody").empty();
+                    $("#modalBody").append(
+
+                        `<div class="container-fluid">
+                            <h3 style="text-align: center;"> Muchas gracias por su compra!</h3>
+                            <p> ${mostrarCarrito(productosAgregados)}</p>
+                            <h4 style="color:#b771f8; text-align: right;"> Total a pagar: $ ${calcularTotal(productosAgregados)}</h4>
+                        </div>
+                        `
                        
                     );                   
                 });
@@ -69,9 +86,23 @@ $(document).ready(() => {
 
 function mostrarCarrito(productos){
     let carrito = "";
-    debugger;
     for(let producto of productos){
-        carrito = carrito + `<p>   ${producto.descripcion} -  $${producto.precio}  &nbsp;  X ${producto.cantidad} </p>`;                    
+        carrito = carrito + `   <p>
+                                    <img class="imgLogo" src= ${producto.imagen} />   
+                                    ${producto.descripcion} -  $${producto.precio}  &nbsp;  X ${producto.cantidad} 
+                                </p>` ;                    
     }
     return carrito;
+}
+
+
+function calcularTotal(productos){
+    let total = 0;
+    for(let producto of productos){
+        
+        total = total + producto.precio * producto.cantidad;
+                  
+    }
+    
+    return total;
 }
