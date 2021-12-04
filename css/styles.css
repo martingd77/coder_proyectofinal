@@ -455,13 +455,23 @@ form {
   padding-right: 1rem; }
 
 .btn-warning{
-  background-color: #b771f8;
-  border-color:  #b771f8;
+  background-color: #d89ad2;
+  border-color:  #d89ad2;
+  display: inline-flex !important;
+  text-align: center;
+  font-size: x-small;
+  font-weight: 400;
+  margin: 0.2em;
 }
 
 .btn-warning:hover {
   background-color: #d89ad2;
   border-color:  #d89ad2;
+  display: inline-flex !important;
+  text-align: center;
+  font-size: x-small;
+  font-weight: 400;
+  margin: 0.2em;
 }
 
 
@@ -515,4 +525,16 @@ form {
 
 .come-from-modal.right.fade.in .modal-dialog {
     right: 0;
+}
+
+
+.productButton{
+    display: inline-flex;
+    vertical-align: top;
+}
+
+.prodButtons{
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  display: flex;
 }
