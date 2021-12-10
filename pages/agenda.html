@@ -67,11 +67,12 @@
           <h1>Agenda de turnos</h1>
           <h4>Indicaciones para agendar</h4>
           <dl style="list-style-type: square">
-            <li>Seleccionar la fecha</li>
-            <li>Seleccionar el servicio</li>
             <li>Seleccionar la profesional</li>
+            <li>Seleccionar el servicio</li>
+            <li>Seleccionar la fecha</li>
+            <li>Seleccionar el horario</li>
+            <li>Ingresar un correo </li>
             <li>Pulsar el botón Agendar</li>
-            <li>Confirmar</li>
           </dl>
           
         </aside>
@@ -80,16 +81,20 @@
             
             <div class="form-group">
               <h5>Agenda</h5>
+              <span style="color: red;" id="errorProfesionalInput"></span>
               <label for="profesionalInput">Selecciona la profesional:</label>
               <select class="form-control" id="profesionalInput">
+                <option>Selecciona una profesional</option>
                 <option>Alejandra</option>
                 <option>Mayra</option>
               </select>
             </div>
 
             <div class="form-group">
+              <span style="color: red;" id="errorServicioInput"></span>
               <label for="servicioInput">Selecciona el servicio a realizarte:</label>
               <select class="form-control" id="servicioInput">
+                <option>Selecciona un servicio</option>
                 <option>Lifting de pestañas</option>
                 <option>Lash botox</option>
                 <option>Perfilado de cejas</option>
@@ -101,9 +106,9 @@
             </div>
 
             <div class="form-group">
+              <span  style="color: red;" id="errorAgendaInput"></span>
               <label for="agendaInput">Selecciona la fecha para tu turno</label>
               <input type="date" class="form-control"  id="agendaInput" placeholder="DD/MM/YYYY" >
-              <!-- <input type="date"  name="Agenda" class="form-control" id="agendaInput" placeholder="Buscá la fecha que prefieras"/> -->
             </div>
             
             <div class="form-group">
@@ -120,6 +125,7 @@
               </select>
             </div>
 
+            <span  style="color: red;" id="errorEmailInput"></span>
             <div class="form-group">
               <label for="emailInput">Correo electronico </label>
               <input
@@ -160,6 +166,24 @@
           </div>
         </div>
       </div>
+
+      <!-- Modal -->
+      <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel" style="margin-left: 3.4rem; margin-right: 3.4rem;" >Resumen de la reserva</h5>
+            </div>
+            <div class="modal-body" id="exampleModalBody">
+              
+            </div>
+            <div class="modal-footer">
+              <button id="btnCerrar" type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: violet; border-color:mediumorchid;">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <footer>
         <div style="text-align-last: center">
           Copyright &copy; 2021 | All rights reserved |
