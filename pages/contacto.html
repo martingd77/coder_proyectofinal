@@ -80,10 +80,11 @@
   
         <article class="container-fluid main-grid.article">
           
-          <form>
+          <form id="formContacto">
             
             <div class="form-group">
               <h5>Por favor completa los datos del siguiente formulario</h5>
+              <span style="color: red;" id="errorNombreInput"></span>
               <label for="nombreInput">Nombre</label>
               <input
                 type="text"
@@ -93,6 +94,7 @@
               />
             </div>
             <div class="form-group">
+              <span style="color: red;" id="errorApellidoInput"></span>
               <label for="apellidoInput">Apellido</label>
               <input
                 type="text"
@@ -102,6 +104,7 @@
               />
             </div>
             <div class="form-group">
+              <span  style="color: red;" id="errorEmailInput"></span>
               <label for="emailInput">Correo electronico </label>
               <input
                 type="email"
@@ -111,7 +114,7 @@
               />
             </div>
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Example select</label>
+              <label for="exampleFormControlSelect1">Estado civil</label>
               <select class="form-control" id="exampleFormControlSelect1">
                 <option>Casado/a</option>
                 <option>Soltero/a</option>
@@ -122,18 +125,18 @@
               <input
                 class="form-check-input"
                 type="checkbox"
-                value="true"
-                id="defaultCheck1"
+                value="false"
+                id="checkNewsletter"
               />
-              <label class="form-check-label" for="defaultCheck1">
+              <label class="form-check-label" for="checkNewsletter">
                 ¿Desea recibir nuestro newsletter?
               </label>
             </div>
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Comentarios</label>
+              <label for="comentariosInput">Comentarios</label>
               <textarea
                 class="form-control"
-                id="exampleFormControlTextarea1"
+                id="comentariosInput"
                 rows="3"
               ></textarea>
             </div>
@@ -155,17 +158,31 @@
       </div>
     </div>
     
+    <!-- Modal -->
+    <div class="modal" id="exampleContactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel" style="margin-left: 3.4rem; margin-right: 3.4rem;" >Formulario enviado</h5>
+          </div>
+          <div class="modal-body" id="exampleContactModalBody">
+            
+          </div>
+          <div class="modal-footer">
+            <button id="btnCerrar" type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: violet; border-color:mediumorchid;">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
       <!-- inicio scripts -->
       <script>
         $(document).ready(function () {
           $('[data-toggle="popover"]').popover();
         });
       </script>
-      <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="../scripts/contacto.js"></script>
       <!-- fin scripts -->
 
     <footer class="main-grid.footer">
